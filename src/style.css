@@ -13,6 +13,14 @@
 #search {
   margin: 3px 0 0 50px;
 }
+#search button {
+  border-radius: 0 5px 5px 0;
+  padding: 0 5px;
+}
+#searchField {
+  border-radius: 5px 0 0 5px;
+  background-color: rgb(247, 235, 235);
+}
 main {
   height: 89vh;
 }
