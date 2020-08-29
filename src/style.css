@@ -7,3 +7,6 @@
   display: flex;
   justify-content: space-evenly;
 }
+#searchIcon {
+  width: 10px;
+}
