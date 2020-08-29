@@ -13,3 +13,11 @@
 #search {
   margin: 3px 0 0 50px;
 }
+main {
+  height: 89vh;
+}
+footer {
+  text-align: center;
+  background-color: #090b6d;
+  color: white;
+}
