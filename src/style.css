@@ -3,29 +3,39 @@
   margin: 0;
   box-sizing: border-box;
 }
-#addAndSearch {
-  display: flex;
-  justify-content: space-evenly;
-}
-#searchIcon {
-  width: 10px;
-}
-#search {
-  margin: 3px 0 0 50px;
-}
-#search button {
-  border-radius: 0 5px 5px 0;
-  padding: 0 5px;
-}
-#searchField {
-  border-radius: 5px 0 0 5px;
-  background-color: rgb(247, 235, 235);
+header>img {
+  width: 100vw;
+  height: 2.5rem;
 }
 main {
-  height: 89vh;
+  width: 100vw;
+  height: 90vh;
 }
 footer {
+  position: relative;
   text-align: center;
   background-color: #090b6d;
   color: white;
+}
+#addTaskContainer {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  
+}
+#taskListContainer {
+  margin-top: .5rem;
+  border: 2px solid;
+  height: 80vh;
+}
+#taskListContainer>h2 {
+  text-align: center;
+  padding-top: 1rem;
+  border-bottom: 2px solid grey;
+}
+#AddButtonImage {
+  width: 4rem;
+}
+#task {
+  padding: 0 5px;
 }
