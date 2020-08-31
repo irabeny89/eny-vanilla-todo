@@ -20,7 +20,7 @@ footer {
 #task {
   padding: 0 5px;
 }
-#AddButtonImage {
+#addButtonImage {
   width: 4rem;
 }
 #addTaskContainer {
@@ -43,11 +43,12 @@ footer {
   border-bottom: 2px solid grey;
 }
 #taskList li {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.4rem;
+  font-weight: 600;
   padding: .5rem;
   border-bottom: 1px solid grey;
 }
