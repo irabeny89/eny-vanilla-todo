@@ -8,6 +8,7 @@ addTask = () => {
   if (task.value) {
     createHTMLTask(listItem, task.value)
     document.querySelector('#taskList').appendChild(listItem)
+    task.value = ''
   }
 }
 
