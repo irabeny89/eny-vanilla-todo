@@ -10,12 +10,18 @@ header>img {
 main {
   width: 100vw;
   height: 90vh;
+  
 }
 footer {
-  position: relative;
   text-align: center;
   background-color: #090b6d;
   color: white;
+}
+#task {
+  padding: 0 5px;
+}
+#AddButtonImage {
+  width: 4rem;
 }
 #addTaskContainer {
   display: flex;
@@ -25,17 +31,23 @@ footer {
 }
 #taskListContainer {
   margin-top: .5rem;
-  border: 2px solid;
-  height: 80vh;
+  border: 2px solid grey;
+  height: 82vh;
+  overflow-y: scroll;
+  margin: .5em 0;
+  padding: .5em;
 }
 #taskListContainer>h2 {
   text-align: center;
   padding-top: 1rem;
   border-bottom: 2px solid grey;
 }
-#AddButtonImage {
-  width: 4rem;
-}
-#task {
-  padding: 0 5px;
+#taskList li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: .5rem;
+  border-bottom: 1px solid grey;
 }
