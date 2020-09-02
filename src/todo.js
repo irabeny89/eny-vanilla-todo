@@ -1,15 +1,28 @@
-createHTMLTask = (listItem, input) => {
-  listItem.innerHTML = `<input type="image" src="../assets/images/delete btn.png" alt="trash-icon">${input}<input id="checkbox" type="checkbox">`
-  listItem
-}
+addButtonImage.onclick = () => {
+  const doc = document
+  const task = doc.createElement('li')
+  const inputTrash = doc.createElement('input')
+  const inputCheckbox = doc.createElement('input')
+  const taskTitle = doc.createElement('p')
 
-addTask = () => {
-  const listItem = document.createElement('li')
-  if (task.value) {
-    createHTMLTask(listItem, task.value)
-    document.querySelector('#taskList').appendChild(listItem)
-    task.value = ''
+  inputTrash.type = 'image'
+  inputTrash.src = '../assets/images/delete btn.png'
+  inputTrash.onclick = () => taskList.removeChild(task)
+  inputCheckbox.type = 'checkbox'
+  inputCheckbox.onclick = () => {
+    if (inputCheckbox.checked) {
+      taskTitle.innerHTML = taskTitle.textContent.strike()
+    } else {
+      taskTitle.textContent = taskTitle.textContent
+    }
   }
-}
 
-addButtonImage.addEventListener('click', addTask)
+  taskTitle.textContent = taskInput.value
+
+  // arrange in these order
+  task.appendChild(inputTrash)
+  task.appendChild(taskTitle)
+  task.appendChild(inputCheckbox)
+  
+  taskList.appendChild(task)
+}
