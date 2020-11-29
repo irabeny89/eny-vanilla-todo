@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do App</title>
+  <style>
+    * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    }
+    header>img {
+      width: 100vw;
+      height: 2.5rem;
+    }
+    main {
+      width: 100vw;
+      height: 90vh;
+      
+    }
+    footer {
+      text-align: center;
+      background-color: #090b6d;
+      color: white;
+    }
+    #taskInput {
+      padding: 0 5px;
+    }
+    #addButtonImage {
+      width: 4rem;
+    }
+    #addTaskContainer {
+      display: flex;
+      justify-content: space-around;
+      width: 100vw;
+      
+    }
+    #taskListContainer {
+      margin-top: .5rem;
+      border: 2px solid grey;
+      height: 82vh;
+      overflow-y: scroll;
+      margin: .5em 0;
+      padding: .5em;
+    }
+    #taskListContainer>h2 {
+      text-align: center;
+      padding-top: 1rem;
+      border-bottom: 2px solid grey;
+    }
+    #taskList li {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: .5rem;
+      border-bottom: 1px solid grey;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../assets/images/header.png" alt="to do app" />
+  </header>
+  <main>
+    <section id="addTaskContainer">
+      <textarea id="taskInput" placeholder="Enter task to do..." rows="2" cols="35" ></textarea>
+      <input id="addButtonImage" type="image" src="../assets/images/add btn.png" alt="add button" />
+    </section>
+    <section id="taskListContainer">
+      <h2>Task List</h2>
+      <ul id="taskList">
+        
+      </ul>
+    </section>
+  </main>
+  
+  <footer>Ernest To Do App &copy;2020</footer>
+  
+  <script>
+      addButtonImage.onclick = () => {
+  if (taskInput.value) {
+    const doc = document
+    const task = doc.createElement('li')
+    const inputTrash = doc.createElement('input')
+    const inputCheckbox = doc.createElement('input')
+    const taskTitle = doc.createElement('p')
+  
+    inputTrash.type = 'image'
+    inputTrash.src = '../assets/images/delete btn.png'
+    inputTrash.onclick = () => taskList.removeChild(task)
+    
+    inputCheckbox.type = 'checkbox'
+    inputCheckbox.onclick = () => inputCheckbox.checked ? taskTitle.innerHTML = taskTitle.textContent.strike() : taskTitle.textContent = taskTitle.textContent
+    taskTitle.textContent = taskInput.value
+  
+    // arrange in these order
+    task.appendChild(inputTrash)
+    task.appendChild(taskTitle)
+    task.appendChild(inputCheckbox)
+    
+    taskList.appendChild(task)
+    taskInput.value = ''
+  }
+  
+}
+  </script>
+</body>
+</html>
