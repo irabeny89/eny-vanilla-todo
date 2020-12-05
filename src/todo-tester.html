@@ -69,8 +69,10 @@
   </header>
   <main>
     <section id="addTaskContainer">
-      <textarea id="taskInput" placeholder="Enter task to do..." rows="2" cols="35" ></textarea>
-      <input id="addButtonImage" type="image" src="../assets/images/add btn.png" alt="add button" />
+      <textarea id="taskInput" placeholder="Enter task to do..." 
+        rows="2" cols="35" ></textarea>
+      <input id="addButtonImage" type="image" 
+        src="../assets/images/add btn.png" alt="add button" />
     </section>
     <section id="taskListContainer">
       <h2>Task List</h2>
@@ -83,32 +85,31 @@
   <footer>Ernest To Do App &copy;2020</footer>
   
   <script>
-      addButtonImage.onclick = () => {
-  if (taskInput.value) {
-    const doc = document
-    const task = doc.createElement('li')
-    const inputTrash = doc.createElement('input')
-    const inputCheckbox = doc.createElement('input')
-    const taskTitle = doc.createElement('p')
-  
-    inputTrash.type = 'image'
-    inputTrash.src = '../assets/images/delete btn.png'
-    inputTrash.onclick = () => taskList.removeChild(task)
-    
-    inputCheckbox.type = 'checkbox'
-    inputCheckbox.onclick = () => inputCheckbox.checked ? taskTitle.innerHTML = taskTitle.textContent.strike() : taskTitle.textContent = taskTitle.textContent
-    taskTitle.textContent = taskInput.value
-  
-    // arrange in these order
-    task.appendChild(inputTrash)
-    task.appendChild(taskTitle)
-    task.appendChild(inputCheckbox)
-    
-    taskList.appendChild(task)
-    taskInput.value = ''
-  }
-  
-}
+    addButtonImage.onclick = () => {
+      if (taskInput.value) {
+        const doc = document
+        const task = doc.createElement('li')
+        const inputTrash = doc.createElement('input')
+        const inputCheckbox = doc.createElement('input')
+        const taskTitle = doc.createElement('p')
+      
+        inputTrash.type = 'image'
+        inputTrash.src = '../assets/images/delete btn.png'
+        inputTrash.onclick = () => taskList.removeChild(task)
+        
+        inputCheckbox.type = 'checkbox'
+        inputCheckbox.onclick = () => inputCheckbox.checked ? taskTitle.innerHTML = taskTitle.textContent.strike() : taskTitle.textContent = taskTitle.textContent
+        taskTitle.textContent = taskInput.value
+      
+        // arrange in these order
+        task.appendChild(inputTrash)
+        task.appendChild(taskTitle)
+        task.appendChild(inputCheckbox)
+        
+        taskList.appendChild(task)
+        taskInput.value = ''
+      }
+    }
   </script>
 </body>
 </html>
